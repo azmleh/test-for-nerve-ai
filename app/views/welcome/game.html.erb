@@ -1,0 +1,8 @@
+<h1>X vs O</h1>
+<form action="match" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <button>New game</button>
+  <% games.each do |game| %>
+    <a href="/matches/<%= game.id %>">Continue <%= game.id %></a>
+  <% end %>
+</form>

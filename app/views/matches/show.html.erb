@@ -1,0 +1,12 @@
+<h1>X vs O</h1>
+<div id="game-app">
+  <div v-if="match" class="field" :style="{ width: (match.size * 32) + 'px' }">
+    <div v-for="(value, key) in field" @click="move(key)">
+      {{ value }}
+    </div>
+  </div>
+  <div class="loading" :class="{ hide: isLoaded }">
+    loading...
+  </div>
+</div>
+<%= javascript_include_tag params[:controller] %>

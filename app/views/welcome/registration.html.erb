@@ -1,0 +1,6 @@
+<form action="confirm" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="key">
+  <label>It had to send to e-mail: <%= key %></label>
+  <button>Check</button>
+</form>
