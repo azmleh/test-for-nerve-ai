@@ -51,7 +51,7 @@ var app = new Vue({
       if (data.result && data.result.win) {
         this.winLine = data.result.cells
       } else {
-        this.field[cell.name] = cell.value;
+        this.field[data.cell.name] = data.cell.value;
       }
     }
   }
